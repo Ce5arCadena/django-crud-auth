@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "aabe8ea4-7933-4c1f-9c18-72c42725c2a4",
+		"name": "Api mini banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12789461"
+	},
+	"item": [
+		{
+			"name": "Crear usuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Juanito\",\r\n    \"email\": \"Juanito@juanito.com\",\r\n    \"password\": \"mipassword123*\",\r\n    \"first_name\": \"Diego\",\r\n    \"last_name\": \"Araujo\",\r\n    \"apellido\": \"Trujillo\",\r\n    \"numero_identificacion\": \"85258525\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear cuentas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_cuenta\": \"CORRIENTE\",\r\n    \"valor_inicial\": \"350000.00\",\r\n    \"usuario\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/cuentas/"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear transacciones",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_transaccion\": \"RETIRO\",\r\n    \"monto\": \"550000.00\",\r\n    \"cuenta\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/transacciones/"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar transaccion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_transaccion\": \"RETIRO\",\r\n    \"monto\": \"50000.00\",\r\n    \"cuenta\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/transacciones/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar cuentas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_cuenta\": \"CDT\",\r\n    \"valor_inicial\": \"50000.00\",\r\n    \"usuario\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/cuentas/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar cuenta",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/banco/cuentas/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar transaccion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/banco/transacciones/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Editar usuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"JuanesCard\",\r\n    \"email\": \"juanes@juanes.com\",\r\n    \"password\": \"mipassword123*\",\r\n    \"first_name\": \"Juanes\",\r\n    \"last_name\": \"Ceballos\",\r\n    \"apellido\": \"Oteca\",\r\n    \"numero_identificacion\": \"78945685\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/users/4/"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"carls\",\r\n    \"email\": \"carls@carls.com\",\r\n    \"password\": \"mipassword123*\",\r\n    \"first_name\": \"Carls\",\r\n    \"last_name\": \"Jhons\",\r\n    \"apellido\": \"Segundo\",\r\n    \"numero_identificacion\": \"20202520\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar de usuarios o por id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/banco/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar cuentas o por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"carls\",\r\n    \"email\": \"carls@carls.com\",\r\n    \"password\": \"mipassword123*\",\r\n    \"first_name\": \"Carls\",\r\n    \"last_name\": \"Jhons\",\r\n    \"apellido\": \"Segundo\",\r\n    \"numero_identificacion\": \"20202520\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/cuentas/"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar transacciones o por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"carls\",\r\n    \"email\": \"carls@carls.com\",\r\n    \"password\": \"mipassword123*\",\r\n    \"first_name\": \"Carls\",\r\n    \"last_name\": \"Jhons\",\r\n    \"apellido\": \"Segundo\",\r\n    \"numero_identificacion\": \"20202520\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/banco/transacciones/"
+			},
+			"response": []
+		}
+	]
+}
