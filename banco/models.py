@@ -25,7 +25,7 @@ class Cuenta(models.Model):
 
 class Transaccion(models.Model):
     TIPO_TRANSACCION_CHOICES = [
-        ('CONSIGNACION', 'Consignación'),.
+        ('CONSIGNACION', 'Consignación'),
         ('RETIRO', 'Retiro'),
     ]
     id_transaccion = models.AutoField(primary_key=True)
